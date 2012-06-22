@@ -12,8 +12,8 @@
     <artifactId>ais-commons-infrastructure</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name></name>
-    <description></description>
+    <name>AIS.PL Commons - Infrastructure</name>
+    <description>This library provides set of reusable components useful for building application infrastructure.</description>
     <url>https://github.com/aispl/ais-commons-infrastructure</url>
 
     <licenses>
