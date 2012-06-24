@@ -71,7 +71,7 @@
         <dependency>
             <groupId>pl.ais.commons</groupId>
             <artifactId>ais-commons-application</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 </project>
