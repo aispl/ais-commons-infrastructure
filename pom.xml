@@ -49,8 +49,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>pl.ais.commons</groupId>
             <artifactId>ais-commons-application</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.3</version>
         </dependency>
     </dependencies>
 </project>
