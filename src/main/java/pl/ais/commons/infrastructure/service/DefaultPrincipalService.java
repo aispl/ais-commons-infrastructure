@@ -58,10 +58,12 @@ public class DefaultPrincipalService implements BeanFactoryAware, PrincipalServi
      */
     @Override
     public void setBeanFactory(@Nonnull final BeanFactory owningFactory) throws BeansException {
+
         // Owning factory can be set only once, ...
         if (null != this.owningFactory) {
             throw new BeanInitializationException("Bean factory already initialized.");
         }
+
         // ... we do require that the factory has to be at least of type ListableBeanFactory
         if (owningFactory instanceof ListableBeanFactory) {
             this.owningFactory = (ListableBeanFactory) owningFactory;
@@ -89,6 +91,7 @@ public class DefaultPrincipalService implements BeanFactoryAware, PrincipalServi
      */
     @Override
     public <T> T unwrap(final Principal principal, final Class<T> asClass) {
+
         // Verify if we have appropriate transformer for the desired class, ...
         final PrincipalTransformer<?> transformer = transformers.get(asClass);
         if (null == transformer) {
@@ -97,7 +100,7 @@ public class DefaultPrincipalService implements BeanFactoryAware, PrincipalServi
         }
 
         // ... apply transformation to the principal, ...
-        T result = (T) transformer.apply(principal);
+        final T result = (T) transformer.apply(principal);
 
         // ... verify and return the result.
         if (null == result) {
